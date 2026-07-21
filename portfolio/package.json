@@ -2,6 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://github.com/bt790110-sudo/portfolio/tree/main/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
