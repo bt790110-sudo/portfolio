@@ -1,9 +1,46 @@
-function Button({ text }) {
-  return (
-    <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">
-      {text}
-    </button>
-  );
+function Button({text}){
+
+
+return(
+
+<button
+
+className="
+px-8
+py-3
+
+rounded-full
+
+bg-gradient-to-r
+from-blue-600
+to-purple-600
+
+text-white
+
+font-semibold
+
+shadow-lg
+
+hover:scale-105
+
+transition
+
+duration-300
+
+"
+
+>
+
+
+{text}
+
+
+</button>
+
+
+)
+
 }
+
 
 export default Button;

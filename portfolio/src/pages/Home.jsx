@@ -1,49 +1,366 @@
 import Button from "../components/Button";
 
-function Home() {
-  return (
-    <section className="min-h-screen flex justify-center items-center">
+import SocialLinks from "../components/SocialLinks";
 
-      <div className="text-center">
+import profile from "../assets/profile.png";
 
-        <h1 className="text-6xl font-bold">
 
-          Hi,
+import {TypeAnimation} from "react-type-animation";
 
-          <br />
 
-          I'm Bikram Thapa
 
-        </h1>
+function Home(){
 
-        <p className="mt-6 text-xl text-gray-500">
 
-          Backend Developer
+return(
 
-          <br />
+<section
 
-          React Learner
+className="
+min-h-screen
 
-          <br />
+flex
+items-center
 
-          Cybersecurity Enthusiast
+px-6
 
-        </p>
+bg-gradient-to-br
 
-        <div className="mt-10 flex gap-4 justify-center">
+from-blue-50
 
-          <Button text="Projects" />
+via-white
 
-          <Button text="Resume" />
+to-purple-100
 
-          <Button text="Contact" />
+dark:from-gray-900
 
-        </div>
+dark:via-gray-800
 
-      </div>
+dark:to-black
 
-    </section>
-  );
+"
+
+
+>
+
+
+<div
+
+className="
+max-w-6xl
+mx-auto
+
+grid
+
+md:grid-cols-2
+
+gap-12
+
+items-center
+
+"
+
+
+>
+
+
+{/* LEFT SIDE */}
+
+
+
+<div
+
+className="
+bg-white/30
+
+dark:bg-white/10
+
+backdrop-blur-lg
+
+p-8
+
+rounded-3xl
+
+shadow-xl
+
+border
+
+border-white/20
+
+"
+
+
+>
+
+
+<h1
+
+className="
+text-5xl
+
+md:text-7xl
+
+font-bold
+
+dark:text-white
+
+"
+
+
+>
+
+
+Hi, I'm
+
+<span
+
+className="
+text-blue-600
+
+"
+
+>
+
+ Bikram
+
+</span>
+
+
+</h1>
+
+
+
+
+<h2
+
+className="
+text-2xl
+
+mt-5
+
+font-semibold
+
+dark:text-gray-200
+
+"
+
+
+>
+
+
+<TypeAnimation
+
+
+sequence={[
+
+"Software Developer",
+
+2000,
+
+"React Developer",
+
+2000,
+
+"Cybersecurity Enthusiast",
+
+2000,
+
+"Backend Developer",
+
+2000
+
+]}
+
+
+speed={50}
+
+
+repeat={Infinity}
+
+
+/>
+
+
+</h2>
+
+
+
+
+<p
+
+className="
+mt-6
+
+text-gray-600
+
+dark:text-gray-300
+
+leading-relaxed
+
+"
+
+
+>
+
+
+I build modern web applications,
+APIs and cybersecurity solutions using
+React, FastAPI, Flutter and security technologies.
+
+
+</p>
+
+
+
+
+<div
+
+className="
+mt-8
+
+flex
+
+gap-5
+
+flex-wrap
+
+"
+
+>
+
+
+<Button text="View Projects"/>
+
+<Button text="Download Resume"/>
+
+
+</div>
+
+
+
+<SocialLinks/>
+
+
+
+
+</div>
+
+
+
+
+
+{/* RIGHT IMAGE */}
+
+
+
+<div
+
+className="
+flex
+
+justify-center
+
+"
+
+
+>
+
+
+<div
+
+className="
+relative
+
+"
+
+
+>
+
+
+<div
+
+className="
+absolute
+
+inset-0
+
+bg-blue-500
+
+rounded-full
+
+blur-3xl
+
+opacity-30
+
+"
+
+>
+
+
+</div>
+
+
+
+
+<img
+
+
+src={profile}
+
+
+alt="profile"
+
+
+className="
+
+relative
+
+w-72
+
+h-72
+
+object-cover
+
+rounded-full
+
+border-4
+
+border-blue-500
+
+shadow-2xl
+
+hover:scale-105
+
+transition
+
+duration-500
+
+"
+
+
+/>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+)
+
+
 }
+
 
 export default Home;

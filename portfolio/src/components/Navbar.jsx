@@ -9,9 +9,15 @@ function Navbar({ darkMode, setDarkMode }) {
 
       <div className="flex justify-between items-center px-8 py-5">
 
-        <h1 className="text-2xl font-bold">
-          Bikram
-        </h1>
+        <h1 className="
+text-2xl
+font-bold
+text-blue-600
+">
+
+Bikram.dev
+
+</h1>
 
         {/* Desktop */}
 

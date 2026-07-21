@@ -1,30 +1,68 @@
 import Navbar from "./components/Navbar";
+
 import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
+
 
 import useTheme from "./hooks/useTheme";
 
-function App() {
 
-  const { darkMode, setDarkMode } = useTheme();
 
-  return (
+function App(){
 
-    <div className="bg-white text-black dark:bg-gray-900 dark:text-white transition duration-500">
 
-      <Navbar
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-      />
+const {
+darkMode,
+setDarkMode
 
-      <Home />
+}=useTheme();
 
-      <Footer />
 
-    </div>
 
-  );
+return (
+
+<div
+
+className="
+bg-white
+
+dark:bg-gray-900
+
+transition
+
+duration-500
+
+"
+
+
+>
+
+
+<Navbar
+
+darkMode={darkMode}
+
+setDarkMode={setDarkMode}
+
+/>
+
+
+
+<Home/>
+
+
+<Footer/>
+
+
+
+</div>
+
+
+)
+
 
 }
+
 
 export default App;
