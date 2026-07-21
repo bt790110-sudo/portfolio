@@ -1,0 +1,11 @@
+{
+  "name": "Bikram Thapa — Portfolio",
+  "short_name": "Bikram Thapa",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "theme_color": "#0B1120",
+  "background_color": "#0B1120",
+  "display": "standalone",
+  "start_url": "."
+}
