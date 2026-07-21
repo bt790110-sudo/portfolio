@@ -71,7 +71,11 @@ Projects
 
           <a>Skills</a>
 
-          <a>Contact</a>
+          <a href="#contact">
+
+Contact
+
+</a>
 
           <ThemeToggle
             darkMode={darkMode}

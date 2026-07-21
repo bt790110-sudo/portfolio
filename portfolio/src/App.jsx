@@ -1,66 +1,49 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 
+import ProjectDetails from "./pages/ProjectDetails";
 
-import useTheme from "./hooks/useTheme";
+import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
 
+function App() {
 
+  return (
 
-function App(){
+    <MainLayout>
 
+      <Routes>
 
-const {
-darkMode,
-setDarkMode
+        <Route path="/" element={<Home />} />
 
-}=useTheme();
+        <Route path="/about" element={<About />} />
 
+        <Route path="/skills" element={<Skills />} />
 
+        <Route path="/projects" element={<Projects />} />
 
-return (
+        <Route
+          path="/projects/:slug"
+          element={<ProjectDetails />}
+        />
 
-<div
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
 
-className="
-bg-white
-dark:bg-gray-900
-transition
+      </Routes>
 
-"
+    </MainLayout>
 
->
-
-
-<Navbar
-
-darkMode={darkMode}
-
-setDarkMode={setDarkMode}
-
-/>
-
-
-<Home/>
-
-
-<About/>
-
-
-<Footer/>
-
-
-
-</div>
-
-)
-
+  );
 
 }
-
 
 export default App;
