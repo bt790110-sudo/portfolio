@@ -1,24 +1,76 @@
-function Navbar() {
+import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
+
+function Navbar({ darkMode, setDarkMode }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="flex justify-between items-center px-8 py-5 shadow">
+    <nav className="shadow-md">
 
-      <h1 className="font-bold text-2xl">
-        Bikram
-      </h1>
+      <div className="flex justify-between items-center px-8 py-5">
 
-      <ul className="flex gap-8">
+        <h1 className="text-2xl font-bold">
+          Bikram
+        </h1>
 
-        <li>Home</li>
+        {/* Desktop */}
 
-        <li>About</li>
+        <ul className="hidden md:flex gap-8">
 
-        <li>Projects</li>
+          <li>Home</li>
 
-        <li>Skills</li>
+          <li>About</li>
 
-        <li>Contact</li>
+          <li>Projects</li>
 
-      </ul>
+          <li>Skills</li>
+
+          <li>Contact</li>
+
+        </ul>
+
+        <div className="hidden md:block">
+          <ThemeToggle
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />
+        </div>
+
+        {/* Mobile Button */}
+
+        <button
+          className="md:hidden text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+
+      </div>
+
+      {/* Mobile Menu */}
+
+      {menuOpen && (
+
+        <div className="md:hidden flex flex-col gap-5 px-8 pb-6">
+
+          <a>Home</a>
+
+          <a>About</a>
+
+          <a>Projects</a>
+
+          <a>Skills</a>
+
+          <a>Contact</a>
+
+          <ThemeToggle
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />
+
+        </div>
+
+      )}
 
     </nav>
   );

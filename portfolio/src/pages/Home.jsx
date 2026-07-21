@@ -2,27 +2,47 @@ import Button from "../components/Button";
 
 function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
+    <section className="min-h-screen flex justify-center items-center">
+
       <div className="text-center">
 
-        <h1 className="text-5xl font-bold">
-          Hi, I'm Bikram 👋
+        <h1 className="text-6xl font-bold">
+
+          Hi,
+
+          <br />
+
+          I'm Bikram Thapa
+
         </h1>
 
-        <p className="mt-4 text-gray-600">
-          Backend Developer | React Learner
+        <p className="mt-6 text-xl text-gray-500">
+
+          Backend Developer
+
+          <br />
+
+          React Learner
+
+          <br />
+
+          Cybersecurity Enthusiast
+
         </p>
 
-        <div className="mt-8 flex gap-4 justify-center">
+        <div className="mt-10 flex gap-4 justify-center">
 
-          <Button text="View Projects" />
+          <Button text="Projects" />
 
-          <Button text="Download Resume" />
+          <Button text="Resume" />
+
+          <Button text="Contact" />
 
         </div>
 
       </div>
-    </main>
+
+    </section>
   );
 }
 
