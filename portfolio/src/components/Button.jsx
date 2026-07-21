@@ -1,46 +1,39 @@
-function Button({text}){
+const base =
+  "inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-signal-teal";
 
+const variants = {
+  primary: "bg-signal-amber text-ink-950 hover:brightness-105 shadow-lg shadow-signal-amber/20",
+  outline:
+    "border border-ink-600 text-ink-900 dark:text-mist-100 hover:border-signal-teal hover:text-signal-teal",
+  ghost: "text-ink-900 dark:text-mist-100 hover:text-signal-teal",
+};
 
-return(
+export default function Button({
+  as = "a",
+  href,
+  onClick,
+  type = "button",
+  variant = "primary",
+  icon: Icon,
+  children,
+  className = "",
+  ...rest
+}) {
+  const classes = `${base} ${variants[variant]} ${className}`;
 
-<button
+  if (as === "button") {
+    return (
+      <button type={type} onClick={onClick} className={`${classes} disabled:opacity-60 disabled:pointer-events-none`} {...rest}>
+        {Icon && <Icon aria-hidden="true" />}
+        {children}
+      </button>
+    );
+  }
 
-className="
-px-8
-py-3
-
-rounded-full
-
-bg-gradient-to-r
-from-blue-600
-to-purple-600
-
-text-white
-
-font-semibold
-
-shadow-lg
-
-hover:scale-105
-
-transition
-
-duration-300
-
-"
-
->
-
-
-{text}
-
-
-</button>
-
-
-)
-
+  return (
+    <a href={href} onClick={onClick} className={classes} {...rest}>
+      {Icon && <Icon aria-hidden="true" />}
+      {children}
+    </a>
+  );
 }
-
-
-export default Button;

@@ -1,76 +1,34 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope
-} from "react-icons/fa";
+import { FiGithub, FiLinkedin, FiTwitter, FiFacebook, FiInstagram, FiLink } from "react-icons/fi";
+import { socialLinks } from "../data/portfolioData";
 
+const iconMap = {
+  github: FiGithub,
+  linkedin: FiLinkedin,
+  twitter: FiTwitter,
+  facebook: FiFacebook,
+  instagram: FiInstagram,
+};
 
-function SocialLinks(){
-
-return (
-
-<div className="
-flex
-gap-6
-mt-8
-justify-center
-md:justify-start
-">
-
-
-<a
-href="https://github.com/"
-target="_blank"
-className="
-text-3xl
-hover:text-blue-600
-transition
-"
->
-
-<FaGithub/>
-
-</a>
-
-
-
-<a
-href="https://linkedin.com/"
-target="_blank"
-className="
-text-3xl
-hover:text-blue-600
-transition
-"
->
-
-<FaLinkedin/>
-
-</a>
-
-
-
-
-<a
-href="mailto:yourmail@gmail.com"
-className="
-text-3xl
-hover:text-blue-600
-transition
-"
->
-
-<FaEnvelope/>
-
-</a>
-
-
-
-</div>
-
-)
-
+export default function SocialLinks({ className = "" }) {
+  return (
+    <ul className={`flex items-center gap-3 ${className}`}>
+      {socialLinks.map((link) => {
+        const Icon = iconMap[link.icon] ?? FiLink;
+        return (
+          <li key={link.label}>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+              title={link.label}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-600 text-ink-900 dark:text-mist-100 hover:border-signal-teal hover:text-signal-teal hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <Icon size={17} />
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  );
 }
-
-
-export default SocialLinks;
