@@ -201,3 +201,6 @@ export const navLinks = [
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
+
+
+
