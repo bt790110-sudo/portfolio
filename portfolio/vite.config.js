@@ -10,7 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 // If you deploy to a custom domain at the root, you can safely change
 // this back to "/".
 export default defineConfig({
-  base: "./portfolio/",
+  base: "/portfolio/",
   plugins: [react(), tailwindcss()],
   build: {
     outDir: "dist",
