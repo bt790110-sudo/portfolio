@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar";
-
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 
 import useTheme from "./hooks/useTheme";
@@ -26,15 +26,10 @@ return (
 
 className="
 bg-white
-
 dark:bg-gray-900
-
 transition
 
-duration-500
-
 "
-
 
 >
 
@@ -48,8 +43,10 @@ setDarkMode={setDarkMode}
 />
 
 
-
 <Home/>
+
+
+<About/>
 
 
 <Footer/>
@@ -57,7 +54,6 @@ setDarkMode={setDarkMode}
 
 
 </div>
-
 
 )
 

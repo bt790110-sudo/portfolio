@@ -23,9 +23,13 @@ Bikram.dev
 
         <ul className="hidden md:flex gap-8">
 
-          <li>Home</li>
+         <a href="#about">
+            About
+             </a>
 
-          <li>About</li>
+          <a href="#projects">
+Projects
+</a>
 
           <li>Projects</li>
 
